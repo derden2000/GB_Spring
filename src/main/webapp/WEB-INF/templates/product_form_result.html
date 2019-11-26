@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Spring MVC GeekApp</title>
+    </head>
+    <body>
+        <h1>Информация о добавленном/измененном продукте</h1>
+        <br>
+        <span th:text="'ID: ' + ${product.id}" />
+        <br>
+        <span th:text="'Название: ' + ${product.title}" />
+        <br>
+        <span th:text="'Цена: ' + ${product.price}" />
+        <br>
+        <!--<a th:href="@{/}">Главная страница</a>-->
+        <a th:href="@{/products/show_all}">Список всех продуктов</a>
+    </body>
+</html>

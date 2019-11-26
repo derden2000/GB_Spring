@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Spring MVC GeekApp</title>
+    </head>
+    <body>
+        <form th:action="@{/products/change_product_form}" th:object="${product}" method="POST">
+            ID: <input th:field="*{id}"/> <!--<span th:text="${product.id}"></span>-->
+            <br>
+            Title: <input th:field="*{title}"/>
+            <br>
+            Price: <input th:field="*{price}"/>
+            <br>
+            <input type="submit" value="Изменить" />
+        </form>
+        <a th:href="@{/products/show_all}">Список всех продуктов</a>
+    </body>
+</html>
